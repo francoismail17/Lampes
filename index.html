@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparatif — Potelets & bornes LED d'extérieur</title>
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f3efe7;
+    --card-line: rgba(30,26,20,0.10);
+    --card-line-strong: rgba(30,26,20,0.22);
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    font-family:'JetBrains Mono', monospace;
+  }
+
+  .wrap{padding:5vw 5vw 6vw;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
+    gap:16px;
+    max-width:1400px;
+    margin:0 auto;
+  }
+
+  .card{
+    position:relative;
+    display:block;
+    aspect-ratio: 3 / 4;
+    border-radius:16px;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    border:1px solid var(--card-line);
+    background:#fff;
+    box-shadow:0 1px 2px rgba(30,26,20,0.04);
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .card:hover{
+    transform:translateY(-3px);
+    border-color:var(--card-line-strong);
+    box-shadow:0 10px 24px rgba(30,26,20,0.12);
+  }
+  .card img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    transition:transform .35s ease;
+  }
+  .card:hover img{transform:scale(1.05);}
+
+  .card::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(20,17,13,0.90) 0%, rgba(20,17,13,0.55) 30%, rgba(20,17,13,0.0) 56%, rgba(20,17,13,0.22) 100%);
+    pointer-events:none;
+  }
+
+  .ip-tag{
+    position:absolute; top:12px; left:12px; z-index:2;
+    font-family:'Space Grotesk', sans-serif;
+    font-size:16px; font-weight:700;
+    letter-spacing:.01em;
+    padding:6px 12px;
+    border-radius:8px;
+    backdrop-filter:blur(6px);
+  }
+  .ip-tag.ip65{background:rgba(23,44,36,0.55); color:#c9f5df; border:1px solid rgba(146,224,190,0.55);}
+  .ip-tag.ip54{background:rgba(58,29,10,0.55); color:#ffdcb0; border:1px solid rgba(240,175,116,0.55);}
+
+  .overlay{
+    position:absolute; left:0; right:0; bottom:0; z-index:2;
+    padding:12px 14px 14px;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  .price{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:20px; font-weight:700; color:#ffc370;
+    line-height:1;
+  }
+  .meta-row{
+    display:flex; align-items:center; gap:8px;
+    font-size:11px;
+    color:rgba(255,255,255,0.86);
+  }
+  .meta-row .sep{color:rgba(255,255,255,0.35);}
+  .meta-row .lm{color:#ffc370; font-weight:600;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="grid">
+
+    <a class="card" href="https://www.luminaire.fr/p/lucande-borne-lumineuse-led-dakil-noire-aluminium-10025941.html" target="_blank">
+      <img src="https://lw-cdn.com/images/F191CF820A76/k_252e744ad1418c90f589dfead5e66f6f;w_1600;h_1600;q_90/10025941.webp" alt="Lucande Dakil">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">27,90 €</span>
+        <div class="meta-row"><span>65 cm</span><span class="sep">·</span><span class="lm">GU10</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.luminaire.fr/p/prios-luminaire-pour-socle-tulimar-45-cm-anthracite-a-1-lampe-metal-5044006.html" target="_blank">
+      <img src="https://lw-cdn.com/images/796B5E3E55D9/k_321a2032f8d6e4eb928b5c40047206c9;w_1600;h_1600;q_90/5044006.webp" alt="Prios Tulimar">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">34,90 €</span>
+        <div class="meta-row"><span>45 cm</span><span class="sep">·</span><span class="lm">GU10</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.luminaire.fr/p/bornes-lumineuses-lindby-halvar-50-cm-noir-ip65-gu10-10042574.html" target="_blank">
+      <img src="https://lw-cdn.com/images/7ADF335A1B2D/k_1d77c8132feeda1e8facb94716c355d2;w_1600;h_1600;q_100/10042574.jpg" alt="Lindby Halvar">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">≈ 35,90 €</span>
+        <div class="meta-row"><span>50 cm</span><span class="sep">·</span><span class="lm">GU10</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.leroymerlin.fr/produits/nettlife-borne-led-exterieure-ip65-etanche-40cm-luminaire-de-jardin-noir-10w-3000k-blanc-chaud-lampe-de-chemin-pour-terrasse-balcon-cour-pelouse-71372019.html" target="_blank">
+      <img src="https://media.adeo.com/mkp/211e689823265e4ed45cea61687d8003/media.jpg" alt="NETTLIFE 40 cm">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">35,99 €</span>
+        <div class="meta-row"><span>40 cm</span><span class="sep">·</span><span class="lm">10 W</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.leroymerlin.fr/produits/potelet-led-exterieur-7w-ip65-89313594.html" target="_blank">
+      <img src="https://media.adeo.com/mkp/5f7b1d27fec862f029364c08f6416aeb/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds" alt="Barcelona LEd 7W">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">39,95 €</span>
+        <div class="meta-row"><span>30 cm</span><span class="sep">·</span><span class="lm">600 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.lumimania.fr/brilagi-lampe-led-dexterieur-crotone-led-7w-230v-marron-ip54-30-cm/" target="_blank">
+      <img src="https://www.lumimania.fr/brilagi-lampe-led-dexterieur-crotone-led-7w-230v-marron-ip54-30-cm-img-bg2721_01-fd-11.jpg" alt="Brilagi Crotone LED">
+      <span class="ip-tag ip54">IP54</span>
+      <div class="overlay">
+        <span class="price">40,40 €</span>
+        <div class="meta-row"><span>30 cm</span><span class="sep">·</span><span class="lm">450 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://greenice.com/fr-fr/products/balise-led-exterieure-corona-40-cm-10-w-220-v-ca-brun-oxyde-3000-k" target="_blank">
+      <img src="https://greenice.com/cdn/shop/files/sl_mb24_021103_bo_0.png?v=1786364299" alt="Greenice Balise Corona">
+      <span class="ip-tag ip54">IP54</span>
+      <div class="overlay">
+        <span class="price">53,82 €</span>
+        <div class="meta-row"><span>40 cm</span><span class="sep">·</span><span class="lm">~950 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.ledkia.com/fr/acheter-balises-sur-pieds/174812-balise-exterieure-led-12w-saillie-pied-40cm-duero.html" target="_blank">
+      <img src="https://www.ledkia.com/2455125-thickbox_sklum/balise-exterieure-led-12w-saillie-pied-40cm-duero.jpg" alt="Ledkia Duero">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">53,99 €</span>
+        <div class="meta-row"><span>40 cm</span><span class="sep">·</span><span class="lm">828 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.castorama.fr/borne-davern-led-integree-1000lm-10w-ip65-goodhome-noir/5059340191058_CAFR.prd" target="_blank">
+      <img src="https://media.castorama.fr/is/image/Castorama/borne-davern-led-integree-1000lm-10w-ip65-goodhome-noir~5059340191058_01i?$MOB_PREV$&$width=1200&$height=1200" alt="Castorama GoodHome Davern">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">54,90 €</span>
+        <div class="meta-row"><span>45 cm</span><span class="sep">·</span><span class="lm">1000 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.luminaire.fr/p/lucande-luminaire-pour-socle-led-tinna-60-cm-anthracite-ip65-9617063.html" target="_blank">
+      <img src="https://lw-cdn.com/images/7A6E20CE024B/k_11b6618cce1141a4ce1cd685676b2364;w_1600;h_1600;q_90/9617063.webp" alt="Lucande Tinna">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">57,80 €</span>
+        <div class="meta-row"><span>60 cm</span><span class="sep">·</span><span class="lm">537 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.luminaire.fr/p/bornes-lumineuses-lindby-kaliro-rouille-60-cm-e27-ip54-10047111.html" target="_blank">
+      <img src="https://lw-cdn.com/images/BC5F16C6E845/k_d07561366c72e2c92c8df3ed65caef85;w_1600;h_1600;q_90/10047111.webp" alt="Lindby Kaliro">
+      <span class="ip-tag ip54">IP54</span>
+      <div class="overlay">
+        <span class="price">59,90 €</span>
+        <div class="meta-row"><span>60 cm</span><span class="sep">·</span><span class="lm">E27</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://greenice.com/fr-fr/products/balise-led-exterieure-san-luis-30-cm-10-w-220-v-ca-3-000-k-brun-rouille" target="_blank">
+      <img src="https://greenice.com/cdn/shop/files/sl_mb21_bl01a_bo_0.png?v=1786364292" alt="Greenice San Luis">
+      <span class="ip-tag ip65">IP65*</span>
+      <div class="overlay">
+        <span class="price">63,79 €</span>
+        <div class="meta-row"><span>30 cm</span><span class="sep">·</span><span class="lm">~900 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.barcelonaled.fr/bornes-et-lampadaires/bollard-led-10w-ip65.html" target="_blank">
+      <img src="https://www.barcelonaled.fr/5484-large_default/bollard-led-10w-ip65.jpg" alt="Barcelona led Bollard">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">63,95 €</span>
+        <div class="meta-row"><span>65 cm</span><span class="sep">·</span><span class="lm">900 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.luminaire.fr/p/lucande-luminaire-pour-socle-led-habsa-30-cm-anthracite-metal-9617087.html" target="_blank">
+      <img src="https://lw-cdn.com/images/7CC3F1DF7A56/k_73a5e1d726c7a5859e4114e4254db515;w_1600;h_1600;q_100/9617087.jpg" alt="Lucande Habsa">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">64,90 €</span>
+        <div class="meta-row"><span>30 cm</span><span class="sep">·</span><span class="lm">640 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.beliani.fr/borne-d-exterieur-led-noir-sabino.html" target="_blank">
+      <img src="https://pictureserver.net/pic_storage/pic/3a/48/undef_src_sa_picid_917066_x_1800_type_color_image.webp?ver=8" alt="Beliani Sabino">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">69,99 €</span>
+        <div class="meta-row"><span>50 cm</span><span class="sep">·</span><span class="lm">500 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.beliani.fr/borne-d-exterieur-led-anoia-marron-826904.html" target="_blank">
+      <img src="https://pictureserver.net/pic_storage/pic/c3/95/undef_src_sa_picid_1107690_x_1000_type_whitesh_image.webp?ver=4" alt="Beliani Anoia">
+      <span class="ip-tag ip65">IP65</span>
+      <div class="overlay">
+        <span class="price">≈ 69,99 €</span>
+        <div class="meta-row"><span>60 cm</span><span class="sep">·</span><span class="lm">159 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.leroymerlin.fr/produits/balise-led-exterieure-10w-aluminium-en-saillie-sur-pied-50cm-iridix-rouille-aluminium-ip54-900lm-94932464.html" target="_blank">
+      <img src="https://media.adeo.com/mkp/c6262e52e95fa34f910e29bd96d6b6d2/media.jpg" alt="Balise Iridix">
+      <span class="ip-tag ip54">IP54</span>
+      <div class="overlay">
+        <span class="price">79,55 €</span>
+        <div class="meta-row"><span>50 cm</span><span class="sep">·</span><span class="lm">900 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.leroymerlin.fr/produits/potelet-bord-de-mer-led-2850-lumens-blanc-chaud-neutre-ou-froid-cizur-inspire-95420552.html" target="_blank">
+      <img src="https://media.adeo.com/media/5187617/media.jpg?width=650&height=650&format=jpg&quality=80&fit=bounds" alt="Cizur Potelet INSPIRE">
+      <span class="ip-tag ip65">IP54-65</span>
+      <div class="overlay">
+        <span class="price">79,90 €</span>
+        <div class="meta-row"><span>n.c.</span><span class="sep">·</span><span class="lm">2850 lm</span></div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.leroymerlin.fr/produits/balise-led-9w-exterieure-aluminium-en-saillie-sur-pied-50cm-sheffield-rouille-aluminium-ip54-850lm-94932599.html" target="_blank">
+      <img src="https://media.adeo.com/mkp/3498e6a791f247882f839bf19d8c0ac3/media.jpg" alt="Balise Sheffield">
+      <span class="ip-tag ip54">IP54</span>
+      <div class="overlay">
+        <span class="price">85,67 €</span>
+        <div class="meta-row"><span>50 cm</span><span class="sep">·</span><span class="lm">850 lm</span></div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+</body>
+</html>
